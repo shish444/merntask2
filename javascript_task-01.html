@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Enter the number:<input id="num" type="number"><br/><br/>
+        <input type="button" value="reverse the number" onclick="funreverse()">
+        <p>The reversed number is:</p>
+        <span id="result"></span>
+        <script>
+            function funreverse(){
+                let num=document.getElementById('num').value;
+                let reversednum=num.toString().split('').reverse().join('');
+                document.getElementById('result').innerHTML=reversednum;
+            }
+        </script>
+    </body>
+</html>

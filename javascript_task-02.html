@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Enter the number:<input id="letters" type="text"><br/><br/>
+        <input type="button" value="alphabetical order" onclick="funorder()">
+        <p>word after arranging into alphabetical order is:</p>
+        <span id="result"></span>
+        <script>
+            function funorder(){
+                let letters=document.getElementById('letters').value;
+                let ordered=letters.toString().split('').sort().join('');
+                document.getElementById('result').innerHTML=ordered;
+            }
+        </script>
+    </body>
+</html>

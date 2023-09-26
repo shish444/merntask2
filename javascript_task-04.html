@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="button" value="show date" onclick="fundate()" style="margin:20px 15px  ;"><br/>
+        <span id="date" style="margin: 15px;"></span><br/>
+        <input type="button" value="show time" onclick="funtime()" style="margin:20px 15px ;"><br/>
+        <span id="time" style="margin: 15px;"></span>
+        <script>
+            function fundate(){
+                var d = new Date();
+                var date = d.getDate();
+                var year = d.getFullYear();
+                var month = d.getMonth();
+                var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+                month = monthArr[month];
+                document.getElementById("date").innerHTML=date+"/"+month+"/"+year;
+            }
+            function funtime(){
+                var date=new Date();
+                document.getElementById('time').innerHTML=date.toString();
+            }
+        </script>
+    </body>
+</html>
